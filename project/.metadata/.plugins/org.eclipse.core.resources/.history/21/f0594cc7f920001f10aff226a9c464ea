@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@ include file="../layout/header.jsp"%>
+
+<div class="container">
+	<h1>AI 여행계획</h1>
+	<form>
+		<input type="hidden" id="id" value="${principal.user.id}" />
+		<div class="input-group mb-3 input-group-sm">
+			<div class="input-group-prepend">
+				<span class="input-group-text">출발 장소</span>
+			</div>
+			<input type="text" id="start" placeholder="장소를 입력하세요" class="form-control">
+		</div>
+		<div class="input-group mb-3 input-group-sm">
+			<div class="input-group-prepend">
+				<span class="input-group-text">목적 장소</span>
+			</div>
+			<input type="text" id="end" placeholder="장소를 입력하세요" class="form-control">
+		</div>
+		<div class="input-group mb-3 input-group-sm">
+			<div class="input-group-prepend">
+				<span class="input-group-text">여행 기간</span>
+			</div>
+			<input type="text" id="days" placeholder="여행 기간을 입력하세요" class="form-control">
+		</div>
+		<button type="button" id="btn-write" class="btn btn-dark">작성</button>
+		<button type="button" id="btn-plan-next" class="btn btn-dark">다른 계획</button>
+		<br><br>
+		<div class="form-group">
+			<label for="result">AI 여행계획 결과:</label>
+			<textarea class="form-control" id="result" rows="10"></textarea>
+		</div>
+		<button type="button" id="btn-plan-save" class="btn btn-dark">저장</button>
+	</form>
+</div>
+
+
+<script src="/js/user.js"></script>
+<%@ include file="../layout/footer.jsp"%>

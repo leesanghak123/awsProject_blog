@@ -1,0 +1,13 @@
+tiktoken
+loguru
+langchain
+streamlit
+faiss-cpu
+huggingface-hub
+langchain-community
+pandas
+sentence-transformers
+openai
+fastapi
+uvicorn
+python-dotenv

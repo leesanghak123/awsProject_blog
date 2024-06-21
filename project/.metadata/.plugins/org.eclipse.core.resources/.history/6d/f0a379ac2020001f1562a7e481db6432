@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@ include file="../layout/header.jsp"%>
+
+<div class="container">
+
+	<button class="btn btn-secondary" onclick="history.back()">돌아가기</button>
+	<c:if test="${gpt.user.id==principal.user.id}">
+		<a href="/" class="btn btn-warning">수정</a>
+		<button id="btn-delete" class="btn btn-danger">삭제</button>
+	</c:if>
+	<br />
+	<br />
+	<div>
+		글 번호:<span id="id"><i>${gpt.id} </i></span>
+		출발지:<span><i>${gpt.start} </i></span>
+		목적지:<span><i>${gpt.end} </i></span>
+		기간:<span><i>${gpt.days} </i></span>
+	</div>
+	<br />
+	<hr />
+	<div>
+		<div>${gpt.result}</div>
+	</div>
+	<hr />
+</div>
+
+
+<script src="/js/user.js"></script>
+<%@ include file="../layout/footer.jsp"%>
